@@ -90,15 +90,6 @@ export default function AboutPage() {
           </div>
         </div>
 
-        {/* Who it's for */}
-        <div className="mb-14">
-          <h2 className="text-2xl font-semibold mb-1">Who Is LilURL For?</h2>
-          <p className="text-gray-600 mb-3">
-            LilURL is built for anyone who shares links online. Whether you are
-            a student submitting assignments, a developer sharing project demos,
-            or a business promoting products, LilURL makes link sharing simple.
-          </p>
-        </div>
 
         {/* Footer */}
         <div className="border-t pt-1 text-center text-gray-500">
@@ -108,3 +99,4 @@ export default function AboutPage() {
     </section>
   );
 }
+
