@@ -46,7 +46,7 @@ export default function Home() {
 
   return (
     <div className={`container mx-auto ${poppins.className}`}>
-      <div className="absolute bg-[#f3f3f3] w-[35vw] h-[34vh] ml-[23vw] mt-[44vh] z-4">
+      <div className="absolute bg-[#f3f3f3] w-[35vw] h-[34vh] ml-[22.5vw] mt-[44vh] z-4">
         <img
           src="https://adespresso.com/wp-content/uploads/2022/06/url-shortener.jpg"
           alt=""
