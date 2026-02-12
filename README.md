@@ -1,36 +1,125 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🔗 lilURL – URL Shortener Web Application
 
-## Getting Started
+lilURL is a modern URL Shortener web application built using Next.js (App Router) and MongoDB.  
+It allows users to generate short, shareable links from long URLs and automatically redirects users when the short link is accessed.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Generate unique short URLs
+- Instant redirection to original link
+- MongoDB database integration
+- Clean and responsive UI
+- About & Contact pages
+- Dynamic routing using Next.js App Router
+- API route for URL generation
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🛠 Tech Stack
 
-## Learn More
+- Frontend: Next.js 14, React
+- Backend: Next.js API Routes
+- Database: MongoDB
+- Styling: CSS
+- Deployment: Vercel compatible
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📂 Project Structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+lilURL/
+│
+├── app/
+│   ├── api/generate/route.js
+│   ├── [shorturl]/page.js
+│   ├── about/page.js
+│   ├── contact/page.js
+│   └── page.js
+│
+├── components/
+│   └── Navbar.js
+│
+├── lib/
+│   └── mongodb.js
+│
+├── public/
+└── package.json
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## ⚙️ How It Works
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. User enters a long URL.
+2. A unique short code is generated.
+3. The URL and short code are stored in MongoDB.
+4. When a user visits /shortcode, the app fetches the original URL and redirects automatically.
+
+---
+
+## 🔧 Installation & Setup
+
+1. Clone the repository
+
+   git clone https://github.com/your-username/lilURL.git  
+   cd lilURL  
+
+2. Install dependencies
+
+   npm install  
+
+3. Create a .env.local file in the root directory:
+
+   MONGODB_URI=your_mongodb_connection_string
+
+4. Run the development server
+
+   npm run dev  
+
+Open http://localhost:3000
+
+---
+
+## 📌 API Endpoint
+
+POST /api/generate
+
+Request Body:
+{
+  "url": "https://example.com"
+}
+
+Response:
+{
+  "shortUrl": "abc123"
+}
+
+---
+
+## 🌍 Deployment
+
+Deploy easily on Vercel or any Node.js hosting platform.  
+Make sure to configure environment variables in the deployment dashboard.
+
+---
+
+## 📈 Future Improvements
+
+- QR Code generation
+- Click analytics tracking
+- User authentication
+- Custom short URLs
+- Expiry time for links
+
+---
+
+## 👨‍💻 Author
+
+Developed as a full-stack project using Next.js and MongoDB.
+
+---
+
+## 📜 License
+
+This project is open-source under the MIT License.
