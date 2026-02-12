@@ -2,7 +2,7 @@
 
 lilURL is a modern URL Shortener web application built using Next.js (App Router) and MongoDB.  
 It allows users to generate short, shareable links from long URLs and automatically redirects users when the short link is accessed.<br><br>
-![Carbon Bazaar Architecture](public/Screenshot%202026-02-12%20231650.png)
+![lilURL Architecture](public/Screenshot%202026-02-12%20231650.png)
 
 ---
 
