@@ -1,104 +1,189 @@
-# 🔗 lilURL – URL Shortener Web Application
+# 🔗 lilURL  
+### A Scalable URL Shortener Web Application
 
-lilURL is a modern URL Shortener web application built using Next.js (App Router) and MongoDB.  
-It allows users to generate short, shareable links from long URLs and automatically redirects users when the short link is accessed.<br><br>
+lilURL is a full-stack URL shortening platform built using **Next.js (App Router)** and **MongoDB**.  
+The application enables users to convert long URLs into compact, shareable links with instant redirection support.
+
+<br>
+
 ![lilURL Architecture](public/Screenshot%202026-02-12%20231650.png)
 
 ---
 
-## 🚀 Features
+## 📌 Project Overview
 
-- Generate unique short URLs
-- Instant redirection to original link
-- MongoDB database integration
-- Clean and responsive UI
-- About & Contact pages
-- Dynamic routing using Next.js App Router
-- API route for URL generation
+lilURL is designed to demonstrate:
 
----
+- Full-stack development using Next.js  
+- REST API implementation  
+- Dynamic routing with App Router  
+- Database integration with MongoDB  
+- Clean and scalable project architecture  
 
-## 🛠 Tech Stack
-
-- Frontend: Next.js 14, React
-- Backend: Next.js API Routes
-- Database: MongoDB
-- Styling: CSS
-- Deployment: Vercel compatible
+The system efficiently maps long URLs to unique short codes and handles real-time redirection.
 
 ---
 
-## ⚙️ How It Works
+## 🚀 Core Features
 
-1. User enters a long URL.
-2. A unique short code is generated.
-3. The URL and short code are stored in MongoDB.
-4. When a user visits /shortcode, the app fetches the original URL and redirects automatically.
+- Unique short URL generation  
+- Instant redirection to original link  
+- Persistent MongoDB storage  
+- Dynamic routing (`/[shorturl]`)  
+- RESTful API endpoint for link creation  
+- Responsive and minimal UI  
+- Static pages (About & Contact)
+
+---
+
+## 🛠 Technology Stack
+
+| Layer        | Technology Used |
+|--------------|-----------------|
+| Frontend     | Next.js 14, React |
+| Backend      | Next.js API Routes |
+| Database     | MongoDB |
+| Styling      | CSS |
+| Deployment   | Vercel Optimized |
+
+---
+
+## ⚙️ Application Workflow
+
+1. User inputs a long URL.
+2. Backend generates a unique short identifier.
+3. The long URL and its short code are stored in MongoDB.
+4. When a user visits `/shortcode`, the application:
+   - Queries the database
+   - Retrieves the original URL
+   - Performs automatic redirection
+
+This ensures efficient link mapping and scalable redirection handling.
+
+---
+
+## 📂 Project Structure
+
+```
+lilURL/
+│
+├── app/
+│   ├── api/generate/route.js   # URL generation endpoint
+│   ├── [shorturl]/page.js      # Dynamic redirect handler
+│   ├── about/page.js
+│   ├── contact/page.js
+│   └── page.js                 # Home page
+│
+├── components/                 # Reusable UI components
+├── lib/
+│   └── mongodb.js              # Database connection setup
+│
+├── public/                     # Static assets
+└── package.json
+```
 
 ---
 
 ## 🔧 Installation & Setup
 
-1. Clone the repository
+### 1️⃣ Clone the Repository
 
-   git clone https://github.com/your-username/lilURL.git  
-   cd lilURL  
+```bash
+git clone https://github.com/your-username/lilURL.git
+cd lilURL
+```
 
-2. Install dependencies
+### 2️⃣ Install Dependencies
 
-   npm install  
+```bash
+npm install
+```
 
-3. Create a .env.local file in the root directory:
+### 3️⃣ Configure Environment Variables
 
-   MONGODB_URI=your_mongodb_connection_string
+Create a `.env.local` file in the root directory:
 
-4. Run the development server
+```env
+MONGODB_URI=your_mongodb_connection_string
+```
 
-   npm run dev  
+### 4️⃣ Run the Development Server
 
-Open http://localhost:3000
+```bash
+npm run dev
+```
+
+Access the application at:
+
+```
+http://localhost:3000
+```
 
 ---
 
-## 📌 API Endpoint
+## 📌 API Documentation
 
-POST /api/generate
+### ➤ Generate Short URL
 
-Request Body:
+**Endpoint:**  
+`POST /api/generate`
+
+**Request Body:**
+```json
 {
   "url": "https://example.com"
 }
+```
 
-Response:
+**Response:**
+```json
 {
   "shortUrl": "abc123"
 }
+```
 
 ---
 
 ## 🌍 Deployment
 
-Deploy easily on Vercel or any Node.js hosting platform.  
-Make sure to configure environment variables in the deployment dashboard.
+The application is optimized for deployment on:
+
+- **Vercel (Recommended)**
+- Any Node.js-compatible hosting platform
+
+Ensure environment variables are configured in the hosting dashboard.
 
 ---
 
-## 📈 Future Improvements
+## 📈 Future Enhancements
 
-- QR Code generation
-- Click analytics tracking
-- User authentication
-- Custom short URLs
-- Expiry time for links
+- QR code generation for short URLs  
+- Click tracking and analytics dashboard  
+- User authentication system  
+- Custom alias support  
+- Link expiration and access control  
+- Rate limiting and enhanced security measures  
+
+---
+
+## 🎯 Learning Outcomes
+
+This project demonstrates:
+
+- Full-stack web development using Next.js  
+- MongoDB integration and CRUD operations  
+- Dynamic routing and server-side redirection  
+- API route design and RESTful architecture  
+- Scalable web application structuring  
 
 ---
 
 ## 👨‍💻 Author
 
-Developed as a full-stack project using Next.js and MongoDB.
+Developed as a full-stack URL shortening system using Next.js and MongoDB.
 
 ---
 
 ## 📜 License
 
-This project is open-source under the MIT License.
+Licensed under the MIT License.
