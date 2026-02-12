@@ -27,28 +27,6 @@ It allows users to generate short, shareable links from long URLs and automatica
 
 ---
 
-## 📂 Project Structure
-
-lilURL/
-│
-├── app/
-│   ├── api/generate/route.js
-│   ├── [shorturl]/page.js
-│   ├── about/page.js
-│   ├── contact/page.js
-│   └── page.js
-│
-├── components/
-│   └── Navbar.js
-│
-├── lib/
-│   └── mongodb.js
-│
-├── public/
-└── package.json
-
----
-
 ## ⚙️ How It Works
 
 1. User enters a long URL.
